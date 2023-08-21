@@ -155,7 +155,19 @@ driver.find_element("xpath", "//a[.='Upload your Prescription']").click()
 driver.find_element("xpath", "//input[@name='mobileNumber']").send_keys("7688663345")
 driver.find_element("xpath", "//button[.='Send OTP']").click()
 """
+"""
+assignment:
+-----------
+launch passport seva application
+https://www.passportindia.gov.in/AppOnlineProject/welcomeLink#
+click on new registration --> enter all details and click on regsiter button
+
+launch spotify application
+https://open.spotify.com/
+click on signup --> enter all details and click on signup
+"""
 ########################################################################################################################
+#21-08-2023
 """
 xpath with partial dynamic element:
 ***********************************
@@ -174,23 +186,52 @@ syntax of text in conatins() function :
 
 examples:
 =========
-xpath to inspect python stable version in selenium.dev
+#xpath to inspect python stable version in selenium.dev
 //a[contains(.,'4.11.2')]
+
+#xpath to inspect huggies wonderpants in medplus
+//span[contains(.,'HUGGIES WONDERPANTS DIAPER')]
+
+#xpath to inspect medplus rajajinagar link in justdial
+//a[contains(. , 'Rajajinagar')]
+
+#xpath to inspect facebook link in sportify
+//span[contains(.,'Facebook')]
+
+#xpath to inspect check box in sporify
+(//span[contains(.,'registration')])[2]
+
+#xpath to inspect shirt in flipkart
+//a[contains(.,'Blend Blue, Black')]
+
+#xpath to inspect shirt in flipkart
+(//a[contains(@href, 'pid=TSHGKCCYMGHJ')])[1]
+
+#xpath to inspect head phone in club factory
+(//p[contains(@class,'text-xs')])[2]
+
+#xpath to inspect shoes in ajo
+//a[contains(@href,'465642484_black')]
+
+#xpath to inspect 'uspolo' in pytm mall
+//a[contains(@href,'us-polo-deals?')]
 """
-
+#########################################################################################################################
 """
-assignment:
------------
-launch passport seva application
-https://www.passportindia.gov.in/AppOnlineProject/welcomeLink#
-click on new registration --> enter all details and click on regsiter button
+handling completely dynamic element:
+************************************
+*the element is completely is keep on changing is called as completley dynamic element.
+*we can handle completeley dynamic element by xpath by traversing concept.
+(traversing means navigating from one element to another element)
+*xpath by traversing is classified into 2 types,
+1.forward traversing:
+*********************
+*traversing from parent to child element by using (/ (or) //).
 
-launch spotify application
-https://open.spotify.com/
-click on signup --> enter all details and click on signup
+2.backword traversing:
+**********************
+*traversing from child to immediate parenet by using (/..) .
 """
-
-
 
 
 
