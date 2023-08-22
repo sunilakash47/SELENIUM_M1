@@ -217,22 +217,74 @@ examples:
 //a[contains(@href,'us-polo-deals?')]
 """
 #########################################################################################################################
+#22-08-2023
 """
 handling completely dynamic element:
 ************************************
-*the element is completely is keep on changing is called as completley dynamic element.
-*we can handle completeley dynamic element by xpath by traversing concept.
+*the element is completely is keep on changing is called as completely dynamic element.
+*we can handle completely dynamic element by xpath by "traversing" concept.
 (traversing means navigating from one element to another element)
 *xpath by traversing is classified into 2 types,
 1.forward traversing:
 *********************
 *traversing from parent to child element by using (/ (or) //).
 
-2.backword traversing:
+2.backward traversing:
 **********************
 *traversing from child to immediate parenet by using (/..) .
+
+steps to inspect completely dynamic element:
+********************************************
+step1: inspect static element
+step2: traverse from static element to common parent(it should be a parent static and dynamic element)
+step3: traverse from common parent to dynamic element
+
+examples:
+---------
+#xpath to inspect box office collection of toby movie
+//td[.='Toby']/..//td[3]
+
+#xpath to inspect rating of jailer movie
+//td[.='Jailer']/../td[4]
+
+#xpath to inspect slno of avtar movie
+//td[.='Avtar']/../td[1]
+
+#xpath to inspect ratings of jailer movie
+//h1[.='Jailer']/../section[1]/div/span[1]
+
+#xpath to inspect no of votings of jailer movie 
+//h1[.='Jailer']/../section[1]/div/span[2]
+
+#xpath to inspect no of votes for blockbuster 
+//span[.='#Blockbuster']/../div/span
+
+#xpath to inspect overs of blr in cricubuzz
+//span[.='BLB']/../../div[2]
+
+#xpath to inspect price of oppo
+//span[contains(.,'OPPO Reno8T 5G')]/../../../div[4]/div[1]/div/div[1]
+
+#xpath to inspect price of nifty in nse
+//p[.='NIFTY NEXT 50']/../p[2]
+
+#xpath to inspect price of metallographic in alibaba
+//h1[contains(.,'Metallographic')]/../../div[5]/div/div/span[1]
 """
 
+"""
+assignment:
+-----------
+xpath to inspect no of views in youtube
+xpath to inspect no of likes in youtube
+xpath to inspect no of subscribes in youtube
+xpath to inspect price of shirt in amazon
+xpath to inspect offer of any product mamaeart
+xpath to find % of 5* in pharmacy
+(https://pharmeasy.in/health-care/products/venusia-max-intensive-moisturizing-cream-for-dry-very-dry-skin-tube-of-150-g-8293)
+xpath to find birt in this year
+(https://www.worldometers.info/)
+"""
 
 
 
