@@ -271,10 +271,99 @@ examples:
 #xpath to inspect price of metallographic in alibaba
 //h1[contains(.,'Metallographic')]/../../div[5]/div/div/span[1]
 """
-
 """
 assignment:
 -----------
+xpath to inspect no of views in youtube
+xpath to inspect no of likes in youtube
+(//yt-formatted-string[contains(.,'Rainmatter')])[3]/../../../div[4]/div/div/div[1]/yt-formatted-string/span[1]
+xpath to inspect no of subscribes in youtube
+xpath to inspect price of shirt in amazon
+xpath to inspect offer of any product mamaeart
+xpath to find % of 5* in pharmacy
+(https://pharmeasy.in/health-care/products/venusia-max-intensive-moisturizing-cream-for-dry-very-dry-skin-tube-of-150-g-8293)
+xpath to find birt in this year
+(https://www.worldometers.info/)
+"""
+##########################################################################################################################
+#23-08-2023
+"""
+handling completely dynamic element by siblings function:
+*********************************************************
+*traversing from one child element to another child element is called as xpath by siblings.
+*there are 2 types of siblings a function are present,
+1.following sibling:
+    *traversing from static element to below of its siblings is called as following sibling.
+    syntax:
+    -------
+    /following-sibling::tag-name
+2.preceding sibling
+    *traversing from static element to above of its siblings is called as preceding sibling.
+    syntax:
+    -------
+    /preceding-sibling::tag-name
+note:
+-----
+*in both following and preceding sibling the index will starts from 1.
+    
+example:
+--------
+<tr>                  ^  preceding sibling
+    <td>2</td>        | -->2
+    <td>U/A</td>      | -->1
+    <td>Toby</td>----->static element
+    <td>45cr</td>     | -->1   
+    <td>*****</td>    | -->2
+</tr>                 V  following sibling
+
+#xpath to inspect box office collection of toby movie
+//td[.='Toby']/following-sibling::td[1]
+
+#xpath to inspect ratings of avtar movie
+//td[.='Avtar']/following-sibling::td[2]
+
+#xpath to inspect certificate of jailer movie
+//td[.='Jailer']/preceding-sibling::td[1]
+
+#xpath to inspect slno of gadar movie
+//td[.='Gadar']/preceding-sibling::td[2]
+
+#xpath to inspect ratings of jailer movie
+//h1[.='Jailer']/following-sibling::section[1]/div/span[1]
+
+#xpath to inspect reviews of jailer movie
+//h1[.='Jailer']/following-sibling::section[1]/div/span[2]
+
+#xpath to inspect likes of KSR movie
+//h5[contains(.,'KOUSALYA')]/../../preceding-sibling::div[2]/div
+
+#xpath to inspect revies of hotel
+(//div[.='Chances Resort and Casino An Indy Resort'])[1]/../following-sibling::div[2]/div[3]/div/div
+"""
+#######################################################################################################################3
+"""
+ancestor function:
+******************
+*traversing from child to any parent element we use ancestor function.
+syntax:
+-------
+/ancestor::tagname
+
+#xpath to inspect whole table
+//td[.='Toby']/ancestor::table
+
+#xpath to inspect whole body
+//td[.='Toby']/ancestor::body
+
+#xpath to inspect whole html page
+//td[.='Toby']/ancestor::html
+
+#xpath to inspect like of song in youtube
+(//yt-formatted-string[contains(.,'Sagaradaache')])[4]/ancestor::div[@id='title']/following-sibling::div[1]/div[2]/div/div/ytd-menu-renderer/div[1]/span[1]
+"""
+"""
+assignment by using sibling:
+----------------------------
 xpath to inspect no of views in youtube
 xpath to inspect no of likes in youtube
 xpath to inspect no of subscribes in youtube
@@ -284,9 +373,16 @@ xpath to find % of 5* in pharmacy
 (https://pharmeasy.in/health-care/products/venusia-max-intensive-moisturizing-cream-for-dry-very-dry-skin-tube-of-150-g-8293)
 xpath to find birt in this year
 (https://www.worldometers.info/)
+
+#shirt
+(//span[contains(.,'Cotton Casual Shirt')])[3]
+
+#offer of shirt
+//span[contains(.,'U.S. POLO ASSN. Men Shirt')]/ancestor::div[@id='titleBlock']/following-sibling::div[2]/div[4]/div[1]/span[1]
+
+#offer of shirt
+(//span[contains(.,'Cotton Casual Shirt')])[3]/../../../following-sibling::div[2]/div/span[2]
 """
-
-
 
 
 
